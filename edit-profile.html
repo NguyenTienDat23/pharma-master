@@ -22,22 +22,8 @@
 
 </head>
 <body>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-<div class="row flex-lg-nowrap">
-  <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
-    <div class="card p-3">
-      <div class="e-navlist e-navlist--active-bg">
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link px-2 active" href="#"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Overview</span></a></li>
-          <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-crud-users" target="__blank"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
-          <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page" target="__blank"><i class="fa fa-fw fa-cog mr-1"></i><span>Settings</span></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
+    <!-- asdfghjkdfghjkl -->
+    <div class="col">
     <div class="row">
       <div class="col mb-3">
         <div class="card">
@@ -46,8 +32,11 @@
               <div class="row">
                 <div class="col-12 col-sm-auto mb-3">
                   <div class="mx-auto" style="width: 140px;">
-                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                    <div class="main d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                      <form action="" method="post" enctype="multipart/form-data">
+                        <a type="file" name="avatar" onchange="previewImage(event)">
+                        <img style="height: 140px; width: 140px;" id="avatar-preview" src="#" alt="Avatar Preview">
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -86,6 +75,16 @@
                             </div>
                           </div>
                         </div>
+                        <div class="col">
+                          <div class="form-group">
+                            <label>Sex</label><br>
+                        <form action="action_page.php">
+                          <input type="radio" name="gender" value="male" > Male<br>
+                          <input type="radio" name="gender" value="female"> Female<br>
+                          <input type="radio" name="gender" value="other"> Other<br>
+                          </form>
+                        </div>
+                      </div>
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
@@ -97,8 +96,8 @@
                         <div class="row">
                           <div class="col mb-3">
                             <div class="form-group">
-                              <label>About</label>
-                              <textarea class="form-control" rows="5" placeholder="My Bio"></textarea>
+                              <label for="phone">Phone</label>
+                              <input class="form-control" type="tel" id="phone" placeholder=""></input>
                             </div>
                           </div>
                         </div>
@@ -182,7 +181,7 @@
             <div class="px-xl-3">
               <button class="btn btn-block btn-secondary">
                 <i class="fa fa-sign-out"></i>
-                <a  href="index.html" ><span >Logout</span></a>
+                <a  href="login.html" ><span >Logout</span></a>
               </button>
             </div>
           </div>
@@ -196,6 +195,25 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function(){
+          var img = document.getElementById("avatar-preview");
+          img.src = reader.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+      </script>
+
+    <script>
+      function showPhoneNumber() {
+      const phoneNumber = document.getElementById("phone").value;
+      alert(phoneNumber);
+       }
+    </script>
 
   </div>
 </div>
