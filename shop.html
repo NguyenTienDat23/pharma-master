@@ -19,14 +19,14 @@
   <link rel="stylesheet" href="css/aos.css">
 
   <link rel="stylesheet" href="css/style.css">
-<style>
-  /* css của cột trái phần danh mục thuốc*/
-  .container>main {display: flex; min-height: 460px; margin-top:5px;}
-  .container>main>#cottrai{background-color:skyblue; width: 30%;}
-  .container>main>#cotphai{background-color:rgba(81, 234, 234, 0.9); width:70%;}
- 
-  #accordion>.cap  { 
-        background:rgba(81, 234, 234, 0.9); padding: 8px 10px;
+<!-- Css cột hiển thị sản phẩm -->
+  <style>
+.container>main{display: flex; min-height: 460px; margin-top: 5px ;  box-shadow:2.5px 2.5px 5px 5px #57545488}
+.container>main>#cottrai {background-color:skyblue; width: 20%;}
+.container>main>#cotphai {background-color:white; width: 80%;}
+
+#accordion>.cap  { 
+        background: lightseagreen; padding: 8px 10px;
         font-weight: bold; text-transform: uppercase; 
         cursor: pointer; color: white;font-size: 18px;
 }
@@ -37,27 +37,12 @@
         cursor: pointer; 
 }
 #accordion > .ct input { width: 16px; height: 16px; margin-right: 10px;}
-/* css của cột trái phần danh mục thuốc kết thúc*/
 
+  </style>
 
+  <!--  Kết thúc Css cột hiển thị sản phẩm -->
 
-/* css phần hiển thị sản phẩm */
-#list1 {
-    display: grid;
-    grid-template-columns: 33.3% 33.3%  33.3% ;
-}
-#list1 > .dt {
-    text-align: center; 
-    border: 2px solid rgb(26, 26, 26); 
-    margin: 10px;
-}
-#list1 > .dt >img {
-    max-width: 80%; 
-    height: 150px; 
-    margin-top: 10px;
-}
-/* Kết thúc css phần hiển thị sản phẩm */
-</style>
+  
 </head>
 
 <body>
@@ -134,204 +119,106 @@
         </div>
       </div>
     </div>
-
+  </div>
+    <!-- danh mục sản phẩm -->
     <div class="site-section">
-      <div class="container">
-        <main>
-          <!-- Bắt đầu danh mục sản phẩm -->
-          <div id="cottrai">
-            <div id="accordion">
-              <!-- đây là cho hiển thị danh mục thuốc  -->
-            <div class="cap">Tên Danh Mục</div>
+   <div class="container">
+    <main>
+      <div id="cottrai">
+        <div id="accordion">
+          <div class="cap">Thương hiệu</div>
             <div class="ct" > 
-                <label><input type="checkbox" class="thuoc" value="antipyreticst"></label>
-                <label><input type="checkbox" class="thuoc" value="analgesic">Analgesic</label>
-                <label><input type="checkbox" class="thuoc" value="antibiotic">Antibiotic</label>
-                <label><input type="checkbox" class="thuoc" value="germicide">Germicide</label>
-              </div>
-              <!-- đây là cho hiển thị danh mục thuốc kết thúc  -->
-
-
-            <!--đây là cho hiện thị danh mục thực phẩm chức năng   -->  
-            <div class="cap">Tên Danh Mục</div>
-            <div class="ct"> 
-                <label><input type="checkbox" class="thucphamchucnang" value="vitamin">Vitamin</label>
-                <label><input type="checkbox" class="thucphamchucnang" value="mine">Fatty Acids</label>
-                <label><input type="checkbox" class="thucphamchucnang" value="mineral">Mineral</label>
-                <label><input type="checkbox" class="thucphamchucnang" value="bacteria">Beneficial Bacteria</label>
+            <label><input type="checkbox" class="thuonghieu" value="Apple">Apple</label>
+            <label><input type="checkbox" class="thuonghieu" value="OPPO">Oppo</label>
+            <label><input type="checkbox" class="thuonghieu" value="Samsung">Samsung</label>
+            <label><input type="checkbox" class="thuonghieu" value="Xiaomi">Xiaomi</label>
+            <label><input type="checkbox" class="thuonghieu" value="Vivo">Vivo</label>
             </div>
-            <!--đây là cho hiện thị danh mục thực phẩm chức năng kết thúc  --> 
-
-
-
-            <!-- Đây là cho hiển thị danh mục chăm sóc cá nhân -->
-
-            <div class="cap">Tên Danh Mục</div>
-            <div class="ct"> 
-                <label><input type="checkbox" class="canhan" value="lankhumui">Lăn Khử Mùi</label>
-                <label><input type="checkbox" class="canhan" value="suatam">Sữa Tắm</label>
-            </div>
-               <!-- Đây là cho hiển thị danh mục chăm sóc cá nhân kết thúc -->
-
-
-
-             <!-- Đây là cho hiển thị danh mục thiết bị y tế -->
-             <div class="cap">Tên Danh Mục</div>
-            <div class="ct"> 
-                <label><input type="checkbox" class="thietbi" value="maytho">Máy thở oxi</label>
-                <label><input type="checkbox" class="thietbi" value="maytim">Máy do nhịp tim</label>
-            </div>
-             <!-- Đây là cho hiển thị danh mục thiết bị y tế kết thúc-->
-            </div>
-          </div>
-<!-- Kết thúc danh mục sản phẩm -->
-
-
-
-
-
-<!-- Hiển thị các sản phẩm -->
-
-          <div id="cotphai"><div id="list1">
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Xiaomi Redmi 9A 2GB/32GB Xanh dương</h3> 
-                <h4>2.290.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Samsung Galaxy A52 4G 8GB/128GB Xanh</h3> 
-                <h4>8.290.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Samsung Galaxy A32 4G 6GB/128GB Xanh</h3> 
-                <h4>5.990.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Xiaomi Redmi 9C 3GB/64GB Xám</h3> 
-                <h4>2.990.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>OPPO A55 4GB/64GB Xanh</h3> 
-                <h4>4.550.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>iPhone 11 64GB Trắng</h3> 
-                <h4>11.990.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>iPhone 13 Pro 128GB Vàng Đồng</h3> 
-                <h4>27.990.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>iPhone 11 64GB Tím</h3> 
-                <h4>11.990.000</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Vivo Y15s 3GB/32GB Xanh Đen</h3> 
-                <h4>3.190.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Vivo Y72 5G 8GB/128GB Đen</h3> 
-                <h4>6.890.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Vivo V23e 8GB/128GB Đen</h3> 
-                <h4>7.390.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Samsung Galaxy S21 Ultra 5G 12GB/128GB Bạc</h3> 
-                <h4>24.990.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Samsung Galaxy A13 4GB/128GB Đen</h3> 
-                <h4>4.290.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Samsung S21 FE 5G 8GB/128GB Tím</h3> 
-                <h4>14.490.000 VNĐ</h4>
-            </div>
-            <div class="dt">
-                <img src="images/product_02.png">
-                <h3>Samsung Galaxy S20 FE 8GB/256GB Xanh</h3> 
-                <h4>10.990.000 VNĐ</h4>
-            </div>
-        </div></div>
-        </main>
-        
+        </div>
+      </div>
+  <div id="cotphai">
     
-        <!-- <div class="row">
-          
+    <div class="row">
+      <!-- sửa tạo viền sản phẩm và đồ bóng  -->
+      <div class="product">
+       <div class="col-sm-6 col-lg-4 text-center item mb-4">
+        <a href="shop-single.html">
+        <img src="images/product_01.png" alt="Image">
+        <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+        <p class="price"><del>95.00</del> &mdash; $55.00</p>
+      </a>
+        </div>
+      </div>
+      <!-- kết thúc của khung sản phẩm  -->
+      <div class="col-sm-6 col-lg-4 text-center item mb-4">
+        <a href="shop-single.html">
+          <img src="images/product_02.png" alt="Image"
+        /></a>
+        <h3 class="text-dark">
+          <a href="shop-single.html">Chanca Piedra</a>
+        </h3>
+        <p class="price">$70.00</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 text-center item mb-4">
+        <a href="shop-single.html">
+          <img src="images/product_03.png" alt="Image"
+        /></a>
+        <h3 class="text-dark">
+          <a href="shop-single.html">Umcka Cold Care</a>
+        </h3>
+        <p class="price">$120.00</p>
+      </div>
 
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Bioderma</a></h3>
-            <p class="price"><del>95.00</del> &mdash; $55.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Chanca Piedra</a></h3>
-            <p class="price">$70.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_03.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Umcka Cold Care</a></h3>
-            <p class="price">$120.00</p>
-          </div>
-    
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-    
-            <a href="product/shop-single.html"> <img src="images/product_04.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.htmll">Cetyl Pure</a></h3>
-            <p class="price"><del>45.00</del> &mdash; $20.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_05.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">CLA Core</a></h3>
-            <p class="price">$38.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="product/shop-single.html"> <img src="images/product_06.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Poo Pourri</a></h3>
-            <p class="price"><del>$89</del> &mdash; $38.00</p>
-          </div>
+      <div class="col-sm-6 col-lg-4 text-center item mb-4">
+        <a href="shop-single.html">
+          <img src="images/product_04.png" alt="Image"
+        /></a>
+        <h3 class="text-dark">
+          <a href="shop-single.html">Cetyl Pure</a>
+        </h3>
+        <p class="price"><del>45.00</del> &mdash; $20.00</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 text-center item mb-4">
+        <a href="shop-single.html">
+          <img src="images/product_05.png" alt="Image"
+        /></a>
+        <h3 class="text-dark"><a href="shop-single.html">CLA Core</a></h3>
+        <p class="price">$38.00</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 text-center item mb-4">
+        <span class="tag">Sale</span>
+        <a href="shop-single.html">
+          <img src="images/product_06.png" alt="Image"
+        /></a>
+        <h3 class="text-dark">
+          <a href="shop-single.html">Poo Pourri</a>
+        </h3>
+        <p class="price"><del>$89</del> &mdash; $38.00</p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a href="shop.html" class="btn btn-primary px-4 py-3"
+          >View All Products</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
 
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="product/shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Bioderma</a></h3>
-            <p class="price"><del>95.00</del> &mdash; $55.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Chanca Piedra</a></h3>
-            <p class="price">$70.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img ˀsrc="images/product_03.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Umcka Cold Care</a></h3>
-            <p class="price">$120.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="product/shop-single.html"> <img src="images/product_06.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Poo Pourri</a></h3>
-            <p class="price"><del>$89</del> &mdash; $38.00</p>
-          </div>
-        </div> -->
+  
+
+  
+
+
+  
+
+
+  
+  </div>
+
+
+   <!-- Kết thúc danh mục sản phẩm -->
         
         <div class="row mt-5">
           <div class="col-md-12 text-center">
