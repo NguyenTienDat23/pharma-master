@@ -57,10 +57,8 @@
                     <p class="mb-0">@johnny.s</p>
                     <div class="text-muted"><small>Last seen 2 hours ago</small></div>
                     <div class="mt-2">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fa fa-fw fa-camera"></i>
-                        <span>Change Photo</span>
-                      </button>
+									    <input type="file" id="customFile" name="file" hidden="">
+									    <label class="btn btn-primary" for="customFile">Upload</label>
                     </div>
                   </div>
                   <div class="text-center text-sm-right">
@@ -101,6 +99,14 @@
                             <div class="form-group">
                               <label>About</label>
                               <textarea class="form-control" rows="5" placeholder="My Bio"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Submit recruitment cv</label>
+                              <input class="form-control" type="file" placeholder="">
                             </div>
                           </div>
                         </div>
@@ -176,7 +182,7 @@
             <div class="px-xl-3">
               <button class="btn btn-block btn-secondary">
                 <i class="fa fa-sign-out"></i>
-                <span>Logout</span>
+                <a  href="index.html" ><span >Logout</span></a>
               </button>
             </div>
           </div>
@@ -185,7 +191,7 @@
           <div class="card-body">
             <h6 class="card-title font-weight-bold">Support</h6>
             <p class="card-text">Get fast, free help from our friendly assistants.</p>
-            <button type="button" class="btn btn-primary">Contact Us</button>
+            <a href="contact.html" ><button type="button" class="btn btn-primary">Contact Us</button></a>
           </div>
         </div>
       </div>
