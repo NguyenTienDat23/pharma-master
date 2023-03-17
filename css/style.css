@@ -1247,19 +1247,8 @@ a {
 }
 .tintucyt{
 }
- 
-* {
-  box-sizing: border-box;
-}
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
+ /* slide khung tin tức */
 
-/* Next & previous buttons */
+/* end slide show trang tin tức */
