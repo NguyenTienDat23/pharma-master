@@ -9,3 +9,9 @@ sign_up_btn.addEventListener('click', () =>{
 sign_in_btn.addEventListener('click', () =>{
     container.classList.remove("sign-up-mode");
 });
+
+
+var input = document.getElementById('username');
+input.oninvalid = function(event){
+    event.target.serCustomValidity('Username should only contain lowercase letters. e.g. john')
+}
