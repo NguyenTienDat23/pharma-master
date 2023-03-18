@@ -1311,3 +1311,49 @@ a {
   
 
 }
+
+
+.search {
+  
+  width: 200%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  margin-right: 100px;
+  margin-bottom: 250px;
+  width: 150%;
+  border: 3px solid #000000;
+  padding: 5px;
+  height: 90px;    /*chiều cao của khung*/
+  border-radius: 12px;
+  outline: none;
+  color: #000000;
+}
+
+.searchTerm:focus{
+  font-size:;
+  color: #000000;
+}
+
+.searchButton {
+  margin-bottom:;
+  width: 100px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap{
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
