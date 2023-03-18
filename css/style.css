@@ -1211,7 +1211,7 @@ a {
       max-height: 140px;
   }
   
-  img {display: block;}
+
   
   .cover {object-fit: cover;}
   .site-navbar .py-2 .edit{
@@ -1245,10 +1245,69 @@ a {
   border-width: 0.5px;
   border-color: #000;
 }
-.tintucyt{
+
+/* .mySlides {
+  display: none;
+} */
+
+.cursor {
+  cursor: pointer;
 }
 
 
- /* slide khung tin tức */
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-/* end slide show trang tin tức */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slideshow {
+  display: flex;
+  margin-right: unset;
+}
+
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 33.33;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.product-img{
+  
+  margin-left: 200px;
+  margin-top: 110px;
+}
+
+/* Thay đổi cơ chữ màu chữ tiêu đề ở đây */
+.product-content{
+  float:top;
+  margin-right: 250px;
+  font-size: 50px;
+}
+
+
+
+/* thay đổi cỡ chữ màu chữ nội dung ở đây */
+.content{
+  font-size: 20px;
+  font-weight:bold;
+  color: #000;
+  
+
+}
