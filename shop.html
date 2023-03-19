@@ -19,10 +19,81 @@
   <link rel="stylesheet" href="css/aos.css">
 
   <link rel="stylesheet" href="css/style.css">
+  <!-- Css cột hiển thị sản phẩm -->
+  <style>
+    .container>main {
+      display: flex;
+      min-height: 460px;
+      margin-top: 200px;
+      margin-bottom: 10%;
+      box-shadow: 3px 4px 2px 0px #57545488
+    }
+
+    .container>main>#cottrai {
+      background-color: rgb(217, 255, 255);
+      width: 20%;
+      border-style: solid;
+      margin-top: 100px;
+    }
+
+    .container>main>#cotphai {
+      background-color: white;
+      width: 80%;
+      margin-top: 100px;
+    }
+
+    .tintucyt {
+      background-color: #ecedee;
+      margin-bottom: 10%;
+      height: 40%;
+      width: 100%;
+      min-height: 500px;
+    }
+
+    .tintucyt>#tintuc {width: 27%;}
+    
+    #accordion>.cap {
+      background: lightseagreen;
+      padding: 8px 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: white;
+      font-size: 18px;
+    }
+
+    #accordion>.ct>label {
+      /* margin: 8px 0 8px 30px; */
+      padding-left: 20px;
+      font-size: 18px;
+      display: block;
+      cursor: pointer;
+    }
+
+    #accordion>.ct input {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+    }
+  </style>
+
+  <!--  Kết thúc Css cột hiển thị sản phẩm -->
+
 
 </head>
 
 <body>
+  <div class="wrap">
+    <form action="" class="search" method="post">
+       <input type="text" class="searchTerm" placeholder="What product are you looking for?">
+    </form>
+ </div>
+
+
+
+
+
+
 
   <div class="site-wrap">
 
@@ -92,92 +163,117 @@
     <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Store</strong></div>
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong
+              class="text-black">Store</strong></div>
         </div>
       </div>
     </div>
-
-    <div class="site-section">
-      <div class="container">
-    
-        <div class="row">
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="product/shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Bioderma</a></h3>
-            <p class="price"><del>95.00</del> &mdash; $55.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Chanca Piedra</a></h3>
-            <p class="price">$70.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_03.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Umcka Cold Care</a></h3>
-            <p class="price">$120.00</p>
-          </div>
-    
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-    
-            <a href="product/shop-single.html"> <img src="images/product_04.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.htmll">Cetyl Pure</a></h3>
-            <p class="price"><del>45.00</del> &mdash; $20.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_05.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">CLA Core</a></h3>
-            <p class="price">$38.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="product/shop-single.html"> <img src="images/product_06.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Poo Pourri</a></h3>
-            <p class="price"><del>$89</del> &mdash; $38.00</p>
-          </div>
-
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="product/shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Bioderma</a></h3>
-            <p class="price"><del>95.00</del> &mdash; $55.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Chanca Piedra</a></h3>
-            <p class="price">$70.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <a href="product/shop-single.html"> <img ˀsrc="images/product_03.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Umcka Cold Care</a></h3>
-            <p class="price">$120.00</p>
-          </div>
-          <div class="col-sm-6 col-lg-4 text-center item mb-4">
-            <span class="tag">Sale</span>
-            <a href="product/shop-single.html"> <img src="images/product_06.png" alt="Image"></a>
-            <h3 class="text-dark"><a href="product/shop-single.html">Poo Pourri</a></h3>
-            <p class="price"><del>$89</del> &mdash; $38.00</p>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-md-12 text-center">
-            <div class="site-block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
+  </div>
+  <!-- danh mục sản phẩm -->
+  <div class="site-section">
+    <div class="container">
+      <main>
+        <div id="cottrai">
+          <div id="accordion">
+            <div class="cap">Thương hiệu</div>
+            <div class="ct">
+              <label class="danhmuc"><a href=""></a> Apple</label>
+              <label><a href=""></a> Oppo</label>
+              <label><a href=""></a> Samsung</label>
+              <label><a href=""></a> Xiaomi</label>
+              <label><a href=""></a> Vivo</label>
             </div>
           </div>
         </div>
-      </div>
+
+        <div id="cotphai">
+
+          <div class="row">
+            <!-- sửa tạo viền sản phẩm và đồ bóng  -->
+            <div class="product">
+              <div class="col-sm-6 col-lg-4 text-center item mb-4">
+                <a href="shop-single.html">
+                  <img src="images/product_01.png" alt="Image" style="width: 100px;">
+                  <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+                  <p class="price"><del>95.00</del> &mdash; $55.00</p>
+                </a>
+              </div>
+            </div>
+            <!-- kết thúc của khung sản phẩm  -->
+            <div class="product">
+              <div class="col-sm-6 col-lg-4 text-center item mb-4">
+                <a href="shop-single.html">
+                  <img src="images/product_01.png" alt="Image" style="width: 100px;">
+                  <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+                  <p class="price"><del>95.00</del> &mdash; $55.00</p>
+                </a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="col-sm-6 col-lg-4 text-center item mb-4">
+                <a href="shop-single.html">
+                  <img src="images/product_01.png" alt="Image" style="width: 100px;">
+                  <p><a href="shop-single.html" class="font-word">Bioderma</a></p>
+                  <p class="cmloai">loai</p>
+                </a>
+              </div>
+            </div>
+            <div class="product">
+              <div class="col-sm-6 col-lg-4 text-center item mb-4">
+                <a href="shop-single.html">
+                  <img src="images/product_01.png" alt="Image" style="width: 100px;">
+                  <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+                  <p class="price"><del>95.00</del> &mdash; $55.00</p>
+                </a>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+          <!-- Kết thúc danh mục sản phẩm -->
+
+          <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <div class="site-block-27">
+                <ul>
+                  <li><a href="#">&lt;</a></li>
+                  <li class="active"><span>1</span></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&gt;</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 
-    
+    <!-- <div class="tintucyt">
+      <div id="tintuc">
+        <div class="col">
+          <div class="imgtintuc">
+            <img src="images/product_01.png" alt="Image" style="">
+          </div>
+<h4 class="font-word">text</h4>
+        </div>
+
+      </div>
+
+    </div> -->
+
+
     <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
       <div class="container">
         <div class="row align-items-stretch">
