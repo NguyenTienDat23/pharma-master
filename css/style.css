@@ -1357,21 +1357,14 @@ word-wrap:break-word;
   flex-wrap: wrap;
   
 }
-  /* edit avatar trong edit-profile */
-  /* .object {
-    background: #E6E6FA;
-      border: 4px double green;
-      max-width: 140px;
-      max-height: 140px;
-  }
-  .cover {object-fit: cover;}
-  .site-navbar .py-2 .edit{
-    margin-bottom: 0px;
-    z-index: 1999;
-    top: 0;
-    width: 100%;
-    background: #fff;
-  }  */
+.thongtin-sp{
+  display: flex;
+  flex-direction: column;
+}
+.ten-mota{
+  flex:1;
+  display: block;
+}
   
 .profile-dropdown {
   position: relative;
