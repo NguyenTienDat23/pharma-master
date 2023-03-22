@@ -1219,9 +1219,18 @@ a {
   font-size: 23px;
   color: #000;
 }
-.cmloai{
+
+.type-product{
+  display: flex;
   font-weight: 600;
+
   color: #000;
+  width: 150px;
+  padding-left: 0px;
+}
+.name-type{
+ width: 150px;
+word-wrap:break-word;
 }
 .danhmuc{
   border-style: solid;
@@ -1287,24 +1296,26 @@ a {
 
 /* thay đổi cỡ chữ màu chữ nội dung ở đây */
 .content{
+  margin-right: 200px; /*mới thêm chỗ này nè*/
+  word-wrap: break-word; /*Chỗ này nữa nè mày*/
   font-size: 20px;
   font-weight:bold;
   color: #000;
-  
-
 }
 
 
 .search {
-  
-  width: 200%;
-  position: relative;
+  width: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .searchTerm {
+  transform: translateY(300px); /*Thay đổi chỗ này*/
   margin-right: 100px;
-  margin-bottom: 250px;
+  margin-bottom: 300  px;
   width: 150%;
   border: 3px solid #000000;
   padding: 5px;
@@ -1335,9 +1346,16 @@ a {
 .wrap{
   width: 35%;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 20%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%);  */ /*bỏ cái này*/
+}
+.thongtinsp{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
 }
   /* edit avatar trong edit-profile */
   /* .object {
