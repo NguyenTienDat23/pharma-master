@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i"
       rel="stylesheet"
     />
+    <!-- thêm icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -95,6 +100,50 @@
                 ><span class="icon-menu"></span
               ></a>
             </div>
+          
+              <!-- user dropdown start-->
+              <div class="profile-dropdown" id="profile-dropdown">
+                <div class="profile-dropdown-btn">
+                  <div class="profile-img">
+                    <img src="/images/user.png" alt="">
+                    <i class="fa-solid fa-circle"></i>
+                  </div>
+                  <span>
+                    Victorria
+                    <i class="fa-solid fa-angle-down"></i>
+                  </span>
+                </div>
+
+
+                <ul class="profile-dropdown-list" id="profile-dropdown-list">
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-regular fa-user"></i>
+                        Edit Profile
+                    </a>
+                  </li>
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-regular fa-circle-question"></i>
+                        Help & Support
+                    </a>
+                  </li>
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                        Log out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <script>
+                var  profile_dropdown = document.getElementById('profile-dropdown');
+                var  profile_dropdown_list = document.getElementById('profile-dropdown-list');
+                profile_dropdown.addEventListener("click",()=>{
+                  profile_dropdown_list.classList.toggle('profile_dropdown_list_hien')
+                })
+            </script>
+            <!-- end user dropdown -->
             <!-- end -->
           </div>
         </div>
@@ -192,9 +241,9 @@
             <!-- sửa tạo viền sản phẩm và đồ bóng  -->
             <div class="product">
              <div class="col-sm-6 col-lg-4 text-center item mb-4">
-              <a href="shop-single.html">
+              <a href="Detailspr.html">
               <img src="images/product_01.png" alt="Image">
-              <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+              <h3 class="text-dark">Biodermas</h3>
               <p class="price"><del>95.00</del> &mdash; $55.00</p>
             </a>
               </div>
@@ -203,27 +252,27 @@
             <!-- tesst -->
             <div class="product">
               <div class="col-sm-6 col-lg-4 text-center item mb-4">
-               <a href="shop-single.html">
+               <a href="Detailspr.html">
                <img src="images/product_01.png" alt="Image">
-               <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+               <h3 class="text-dark"><a href="Detailspr.html">Bioderma</a></h3>
                <p class="price"><del>95.00</del> &mdash; $55.00</p>
              </a>
                </div>
              </div>
              <div class="product">
               <div class="col-sm-6 col-lg-4 text-center item mb-4">
-               <a href="shop-single.html">
+               <a href="Detailspr.html">
                <img src="images/product_01.png" alt="Image" style="height: 200px;">
-               <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+               <h3 class="text-dark"><a href="Detailspr.html">Bioderma</a></h3>
                <p class="price"><del>95.00</del> &mdash; $55.00</p>
              </a>
                </div>
              </div>
              <div class="product">
               <div class="col-sm-6 col-lg-4 text-center item mb-4">
-               <a href="shop-single.html">
+               <a href="Detailspr.html">
                <img src="images/product_01.png" alt="Image">
-               <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+               <h3 class="text-dark"><a href="Detailspr.html">Bioderma</a></h3>
                <p class="price"><del>95.00</del> &mdash; $55.00</p>
              </a>
                </div>
@@ -250,41 +299,41 @@
             <div class="col-md-12 block-3 products-wrap">
               <div class="nonloop-block-3 owl-carousel">
                 <div class="text-center item mb-4">
-                  <a href="shop-single.html">
+                  <a href="Detailspr.html">
                     <img src="images/product_03.png" alt="Image"
                   /></a>
                   <h3 class="text-dark">
-                    <a href="shop-single.html">Umcka Cold Care</a>
+                    <a href="Detailspr.html">Umcka Cold Care</a>
                   </h3>
                   <p class="price">$120.00</p>
                 </div>
 
                 <div class="text-center item mb-4">
-                  <a href="shop-single.html">
+                  <a href="Detailspr.html">
                     <img src="images/product_01.png" alt="Image"
                   /></a>
                   <h3 class="text-dark">
-                    <a href="shop-single.html">Umcka Cold Care</a>
+                    <a href="Detailspr.html">Umcka Cold Care</a>
                   </h3>
                   <p class="price">$120.00</p>
                 </div>
 
                 <div class="text-center item mb-4">
-                  <a href="shop-single.html">
+                  <a href="Detailspr.html">
                     <img src="images/product_02.png" alt="Image"
                   /></a>
                   <h3 class="text-dark">
-                    <a href="shop-single.html">Umcka Cold Care</a>
+                    <a href="Detailspr.html">Umcka Cold Care</a>
                   </h3>
                   <p class="price">$120.00</p>
                 </div>
 
                 <div class="text-center item mb-4">
-                  <a href="shop-single.html">
+                  <a href="Detailspr.html">
                     <img src="images/product_04.png" alt="Image"
                   /></a>
                   <h3 class="text-dark">
-                    <a href="shop-single.html">Umcka Cold Care</a>
+                    <a href="Detailspr.html">Umcka Cold Care</a>
                   </h3>
                   <p class="price">$120.00</p>
                 </div>
