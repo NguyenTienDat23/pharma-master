@@ -1239,8 +1239,9 @@ word-wrap:break-word;
 }
 
 /* .mySlides {
-  display: none;
-} */
+  /* margin-right: 200px;
+  display: none; */
+
 
 .cursor {
   cursor: pointer;
@@ -1280,14 +1281,13 @@ word-wrap:break-word;
   opacity: 1;
 }
 .product-img{
-  
-  margin-left: 200px;
-  margin-top: 110px;
+  margin-left: 75%;
+  margin-top: 50px;
 }
 
 /* Thay đổi cơ chữ màu chữ tiêu đề ở đây */
 .product-content{
-  float:top;
+  white-space: nowrap;
   margin-right: 250px;
   font-size: 50px;
 }
@@ -1326,12 +1326,10 @@ word-wrap:break-word;
 }
 
 .searchTerm:focus{
-  font-size:;
   color: #000000;
 }
 
 .searchButton {
-  margin-bottom:;
   width: 100px;
   height: 36px;
   border: 1px solid #00B4CC;
@@ -1357,21 +1355,14 @@ word-wrap:break-word;
   flex-wrap: wrap;
   
 }
-  /* edit avatar trong edit-profile */
-  /* .object {
-    background: #E6E6FA;
-      border: 4px double green;
-      max-width: 140px;
-      max-height: 140px;
-  }
-  .cover {object-fit: cover;}
-  .site-navbar .py-2 .edit{
-    margin-bottom: 0px;
-    z-index: 1999;
-    top: 0;
-    width: 100%;
-    background: #fff;
-  }  */
+.thongtin-sp{
+  display: flex;
+  flex-direction: column;
+}
+.ten-mota{
+  flex:1;
+  display: block;
+}
   
 .profile-dropdown {
   position: relative;
@@ -1488,4 +1479,17 @@ word-wrap:break-word;
 .profile-dropdown-list-item:hover {
   padding-left: 1.5rem;
   background-color: var(--secondary-light);
+}
+.thongtin-sp {
+  max-height: 200px; /* chiều cao mặc định */
+  overflow: hidden; /* ẩn nội dung dài */
+}
+
+.thongtin-sp.expanded {
+  max-height: none; /* hiển thị tất cả nội dung */
+}
+
+#show-more-btn {
+  display: block;
+  margin: 20px auto;
 }
