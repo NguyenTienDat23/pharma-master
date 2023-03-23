@@ -14,21 +14,19 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
+          <form method="post" action="" id="loginform" class="sign-in-form">
             <h2 class="title">Sign In</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="username" name="username" placeholder="Username" pattern="[A-Za-z0-9]{1,15}"/>
-              <span>text</span>
-            </div>
-            <div id="loiUser"></div>
+              <input type="text" id="username" name="username" placeholder="Username" value=""/>
+              
+            </div><span id=username_error></span>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" id="password" name="password" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
-              <a>text</a>
-            </div>
-            <div id="loiPass"></div>
-            <button type="submit" class="btn solid">Login</button>
+              <input type="text" id="password" name="password" placeholder="Password"  value="" />
+              
+            </div><span id="password_error"></span>
+            <input type="submit" onclick="return validate();" id="btn" class="btn solid" value="Login">
 
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
@@ -45,8 +43,42 @@
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
+    <!-- css kiểm tra login -->
+            <style>
+              span{
+                color: red;
+              display: block;
+              padding: 5px 0px;
+              }
+            </style>
+            <!-- end css kiểm tra -->
+    <script>
+      // lấy giá trị của 1 input
+      function getValue(id){
+        return document.getElementById(id).value.trim();
+      }
+      // hiển thị lỗi
+      function showError(key, mess){
+        document.getElementById(key+ '_error').innerHTML = mess;
+      }
+      function validate()
+      {
+        var flag =true;
+        // 1 username
+        var username = getValue('username');
+        if (username ==' ' || username.leght < 5 || !/^[a-zA-Z0-9]+$/.test(username)){
+          flag = false;
+          showError('username', 'Vui lòng kiểm tra lại Username');
+        }
+        var password = getValue('password');
+        if (password == '' || password.length < 8 || password != repassword){
+          flag = false;
+          showError('password', 'Vui lòng kiểm tra lại Password');
+        }
+        return flag;
+      }
+    </script>
           </form>
-
           <form action="" class="sign-up-form">
             <h2 class="title">Sign Up</h2>
             <div class="input-field">
