@@ -121,13 +121,16 @@
       <div class="tab-content" id="pills-tabContent">
         <div>
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-          <table class="table custom-table">
+          <span  class="show-more" onclick="showMore()">Xem thêm thông tin</span>
+
+          <table class="table custom-table" id="myTable">
            <!-- Sủa thông tin ở đây và CSS dòng 1362->1369 -->
             <thead>
               <th>Mô tả</th>
             </thead>
             <tbody class="thongtin-sp">
               <td class="ten-mota">
+                <!-- Thêm một số thông tin sản phẩm ở đây -->
                 <p><strong>Loại Thuốc</strong></p>
                 <ul>
                   <li>Vitamin C (Dưới dạng Acid L-ascorbic): 500 mg</li>
@@ -225,8 +228,26 @@
                   <li>Phụ liệu: Povidon K30, Low-substituted hydroxypropyl Cellulose, Microcrystallin Cellulose 101, Crospovidon, Hydroxypropyl Methylcellulose, Magnesi Stearat, Novomix, Colloidal Silicon Dioxid, Talc, Polyethylen Glycol 6000, Phẩm màu sunset yellow, Titan dioxid, Polysorbat 80, Phẩm màu erythrosine.</li>
                 </ul>
               </td>
+              <!-- Kết thúc -->
             </tbody>
           </table>
+          <script>
+function toggleTable() {
+  var table = document.getElementById("myTable");
+  var moreText = document.getElementsByClassName("show-more")[0];
+  if (table.classList.contains("show")) {
+    table.classList.remove("show");
+    moreText.classList.remove("hidden");
+    moreText.innerHTML = "Xem thêm thông tin";
+  } else {
+    table.classList.add("show");
+    moreText.classList.add("hidden");
+    moreText.innerHTML = "Thu gọn";
+  }
+}
+var moreText = document.getElementsByClassName("show-more")[0];
+moreText.addEventListener("click", toggleTable);
+</script>
         </div>
       </div>
 <!-- Kết thúc -->
