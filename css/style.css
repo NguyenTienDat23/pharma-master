@@ -1314,8 +1314,8 @@ word-wrap:break-word;
 
 .searchTerm {
   transform: translateY(300px); /*Thay đổi chỗ này*/
-  margin-right: 100px;
-  margin-bottom: 300  px;
+  margin-right: 50px;
+  /* margin-bottom: 300px; */
   width: 150%;
   border: 3px solid #000000;
   padding: 5px;
@@ -1326,12 +1326,11 @@ word-wrap:break-word;
 }
 
 .searchTerm:focus{
-  font-size:;
+ 
   color: #000000;
 }
 
 .searchButton {
-  margin-bottom:;
   width: 100px;
   height: 36px;
   border: 1px solid #00B4CC;
@@ -1358,8 +1357,13 @@ word-wrap:break-word;
   
 }
 .thongtin-sp{
-  display: flex;
+  display: none;
   flex-direction: column;
+}
+.show-more {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
 }
 .ten-mota{
   flex:1;
