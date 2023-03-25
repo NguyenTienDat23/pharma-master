@@ -104,11 +104,11 @@
               <!-- user dropdown start-->
               <div class="profile-dropdown" id="profile-dropdown">
                 <div class="profile-dropdown-btn">
-                  <div class="profile-img">
-                    <img src="/images/user.png" alt="">
+                  <div class="profile-img" id="user-info" >
+                    <img id="user-avatar" src="/images/user.png" alt="">
                     <i class="fa-solid fa-circle"></i>
                   </div>
-                  <span>
+                  <span id="user-name">
                     Victorria
                     <i class="fa-solid fa-angle-down"></i>
                   </span>
@@ -117,7 +117,7 @@
 
                 <ul class="profile-dropdown-list" id="profile-dropdown-list">
                   <li class="profile-dropdown-list-item">
-                    <a href="#">
+                    <a href="/edit-profile.html">
                       <i class="fa-regular fa-user"></i>
                         Edit Profile
                     </a>
@@ -142,6 +142,22 @@
                 profile_dropdown.addEventListener("click",()=>{
                   profile_dropdown_list.classList.toggle('profile_dropdown_list_hien')
                 })
+            </script>
+            <script>
+              function validate(){
+                //Ẩn nút đăng nhập 
+                document.getElementById("btn").style.display="none";
+
+                // 
+                var user = { name: "John Doe", avatar:"/images/user.png"};
+                
+                // 
+                document.getElementById("user-avatar").src = user.avatar;
+                document.getElementById("user-name").innerHTML = user.name;
+
+                // 
+                document.getElementById("user-info").style.display = "block";
+              }
             </script>
             <!-- end user dropdown -->
             <!-- end -->
