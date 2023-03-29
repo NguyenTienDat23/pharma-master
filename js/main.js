@@ -248,10 +248,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
-var showMoreBtn = document.getElementById('show-more-btn');
-var tbody = document.querySelector('.thongtin-sp');
 
-showMoreBtn.addEventListener('click', function() {
-  tbody.classList.add('expanded');
-  showMoreBtn.style.display = 'none';
-});
