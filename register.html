@@ -45,6 +45,30 @@
 .input_box i { color:#007AFF; margin:0px 10px}
 .input_item { width:100%; border:none;}
 .input_item:focus {outline:none}
+/* input file */
+.input_file {width:100%;height:120px;
+			border:1px #CCCCCC solid; margin:20px 0px;
+			display: flex;flex-direction: row;align-items: center;}
+.input_file a { color:#007AFF; margin:auto auto;}
+.inputfile{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  display: inline-block;
+  cursor: pointer;
+  margin: 140px auto ;
+}
+.inputfile:focus + label,
+.inputfile +label:hover{
+  background-color: white;
+}
 /*Hộp chọn*/
 .check_box {width:100%; margin:20px 0px; 
 			display: flex;flex-direction: row;align-items: center;}
@@ -133,7 +157,7 @@ input[type=checkbox] {width:20px; height:20px; margin-right:10px}
                 <div class="profile-dropdown" id="profile-dropdown">
                   <div class="profile-dropdown-btn">
                     <div class="profile-img" id="user-info" >
-                      <img id="user-avatar" src="/images/user.png" alt="">
+                      <img id="user-avatar" src="/images/person_2.jpg" alt="">
                       <i class="fa-solid fa-circle"></i>
                     </div>
                     <span id="user-name">
@@ -247,6 +271,11 @@ input[type=checkbox] {width:20px; height:20px; margin-right:10px}
                     </div>
                     <div id="ErorrRePass"></div>
                     
+                    <div class="input_file">
+                      <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} file selected" multiple/>
+                      <label for="file" class="fa-solid fa-folder-open"> Choose a file</label>
+                    </div>
+
                     <div class="check_box">
                         <input type="checkbox" id="agree" value="1">
                         <label for="agree">I agree</label>
@@ -263,6 +292,30 @@ input[type=checkbox] {width:20px; height:20px; margin-right:10px}
             </form>
         </div>
     </div>
+    <script>
+      var inputs = document.querySelectorAll( '.inputfile' );
+Array.prototype.forEach.call( inputs, function( input )
+{
+	var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+	input.addEventListener( 'change', function( e )
+	{
+		var fileName = '';
+		if( this.files && this.files.length > 1 )
+			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+		else
+			fileName = e.target.value.split( '\\' ).pop();
+
+		if( fileName )
+			label.querySelector( 'span' ).innerHTML = fileName;
+		else
+			label.innerHTML = labelVal;
+	});
+});
+
+
+    </script>
     <!-- end register -->
 </body>
 </html>
