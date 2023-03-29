@@ -1287,8 +1287,9 @@ word-wrap:break-word;
 
 /* Thay đổi cơ chữ màu chữ tiêu đề ở đây */
 .product-content{
+  /* word-wrap: break-word; */
   float:top;
-  margin-right: 250px;
+  /* margin-right: 250px; */
   font-size: 50px;
 }
 
@@ -1356,16 +1357,14 @@ word-wrap:break-word;
   flex-wrap: wrap;
   
 }
-.thongtin-sp{
-  display: none;
-  flex-direction: column;
-}
+
 .show-more {
   display: block;
   margin-top: 10px;
   cursor: pointer;
 }
 .ten-mota{
+
   flex:1;
   display: block;
 }
@@ -1485,4 +1484,7 @@ word-wrap:break-word;
 .profile-dropdown-list-item:hover {
   padding-left: 1.5rem;
   background-color: var(--secondary-light);
+}
+.custom-tablesp{
+  border:  2px outset #351d8b;
 }
