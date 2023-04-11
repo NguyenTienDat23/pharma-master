@@ -1,147 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignIn&SignUp</title>
-    <link rel="stylesheet" type="text/css" href="css/login.css" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form method="post" action="" id="loginform" class="sign-in-form">
-            <h2 class="title">Sign In</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" id="username" name="username" placeholder="Username" value=""/>
-              
-            </div><span id=username_error></span>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="text" id="password" name="password" placeholder="Password"  value="" />
-              
-            </div><span id="password_error"></span>
-            <input type="submit" onclick="return validate();" id="btn" class="btn solid" value="Login">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  
 
-            <p class="social-text">Or Sign in with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-    <!-- css kiểm tra login -->
-            <style>
-              span{
-                color: red;
-              display: block;
-              padding: 5px 0px;
-              }
-            </style>
-            <!-- end css kiểm tra -->
-    <script>
-      // lấy giá trị của 1 input
-      function getValue(id){
-        return document.getElementById(id).value.trim();
-      }
-      // hiển thị lỗi
-      function showError(key, mess){
-        document.getElementById(key+ '_error').innerHTML = mess;
-      }
-      function validate()
-      {
-        var flag =true;
-        // 1 username
-        var username = getValue('username');
-        if (username ==' ' || username.leght < 5 || !/^[a-zA-Z0-9]+$/.test(username)){
-          flag = false;
-          showError('username', 'Vui lòng kiểm tra lại Username');
-        }
-        var password = getValue('password');
-        if (password == '' || password.length < 8 || password != repassword){
-          flag = false;
-          showError('password', 'Vui lòng kiểm tra lại Password');
-        }
-        return flag;
-      }
-    </script>
-          </form>
-          <form action="" class="sign-up-form">
-            <h2 class="title">Sign Up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Sign Up" class="btn solid" />
+  <link
+  href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i"
+  rel="stylesheet"
+/>
+<!-- thêm icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+/>
+<link rel="stylesheet" href="fonts/icomoon/style.css" />
 
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/magnific-popup.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<link rel="stylesheet" href="css/owl.carousel.min.css" />
+<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+<link rel="stylesheet" href="css/aos.css" />
+
+<link rel="stylesheet" href="css/style.css" />
+  <style>
+    @charset "utf-8";
+    /* Khung ngoài */
+    #login_box {
+      width: 30%;
+      margin: 190px auto; 
+      padding: 5px 10px;
+      font-family: Arial, Helvetica, sans-serif; 
+      font-size: 13px; color: #999;
+    }
+    /* Logo tiêu đề */
+    #login_title {
+      font-size: 24px; 
+      color:#666; 
+      margin: 20px 0px}
+    /* form nhập thông tin */
+    #login_form a { 
+      color: #007AFF; 
+      text-decoration: none;}
+    .form_group{
+      border-radius: 5px; 
+      border: 1px #CCCCCC solid;
+      padding: 10px 20px;
+    }
+    .form_group legend {
+      color: #09F;
+    }
+    /* input nhập thông tin */
+    .input_box {
+      width: 100%;
+      height: 30px;
+      border: 1px #CCCCCC solid;
+      margin: 20px 0px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .input_box i {
+      color: #007AFF;
+      margin: 0px 10px;
+    }
+    .input_item {
+      width: 100%;
+      border: none;
+    }
+    .input_item:focus {
+      outline: none;
+    }
+    /* Hộp chọn */
+    .check_box {
+      width: 100%;
+      margin: 20px 0px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: row;
+    }
+    input[type=checkbox] {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    /* nút bấm */
+    .buttom_item {
+      text-align: right;
+    }
+    .buttom_item button {
+      height: 30px;
+      background: #007AFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 12px;
+    }
+    .buttom_item button:disabled {
+      background: #CCC;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrap">
+    <div class="site-navbar py-2">
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"
+            ><span class="icon-close2"></span
+          ></a>
+          <form action="#" method="post">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search keyword and hit enter..."
+            />
           </form>
         </div>
       </div>
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>New here?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              minus natus est.
-            </p>
-            <button class="btn transparent" id="sign-up-btn">Sign Up</button>
-          </div>
-          <img src="./img/log.svg" class="image" alt="" />
-        </div>
 
-        <div class="panel right-panel">
-          <div class="content">
-            <h3>One of us?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              minus natus est.
-            </p>
-            <button class="btn transparent" id="sign-in-btn">Sign In</button>
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">Pharma</a>
+            </div>
           </div>
-          <img src="images/register.svg" class="image" alt="" />
+          <div class="main-nav d-none d-lg-block">
+            <nav
+              class="site-navigation text-right text-md-center"
+              role="navigation"
+            >
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Store</a></li>
+                <li class="has-children">
+                  <a href="#">Dropdown</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Supplements</a></li>
+                    <li class="has-children">
+                      <a href="#">Vitamins</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Vitamins</a></li>
+                        <li><a href="#">Diet &amp; Nutrition</a></li>
+                        <li><a href="#">Tea &amp; Coffee</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Diet &amp; Nutrition</a></li>
+                    <li><a href="#">Tea &amp; Coffee</a></li>
+                  </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- sửa icon giỏ hàng rồi -->
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"
+              ><span class="icon-search"></span
+            ></a>
+            <a href="#" class="icons-btn d-inline-block js-search-open"
+            ><span class="icon-envelope-o"></span
+          ></a>
+            <a href="login.html">Login/SignUp</a>
+            <a
+              href="#"
+              class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"
+              ><span class="icon-menu"></span
+            ></a>
+          </div>
+        
+            <!-- user dropdown start-->
+            <div class="profile-dropdown" id="profile-dropdown">
+              <div class="profile-dropdown-btn">
+                <div class="profile-img" id="user-info" >
+                  <img id="user-avatar" src="/images/user.png" alt="">
+                  <i class="fa-solid fa-circle"></i>
+                </div>
+                <span id="user-name">
+                  Victorria
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </div>
+
+
+              <ul class="profile-dropdown-list" id="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                  <a href="/edit-profile.html">
+                    <i class="fa-regular fa-user"></i>
+                      Edit Profile
+                  </a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-regular fa-circle-question"></i>
+                      Help & Support
+                  </a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                      Log out
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <script>
+              var  profile_dropdown = document.getElementById('profile-dropdown');
+              var  profile_dropdown_list = document.getElementById('profile-dropdown-list');
+              profile_dropdown.addEventListener("click",()=>{
+                profile_dropdown_list.classList.toggle('profile_dropdown_list_hien')
+              })
+          </script>
+          <script>
+            function validate(){
+              //Ẩn nút đăng nhập 
+              document.getElementById("btn").style.display="none";
+
+              // 
+              var user = { name: "John Doe", avatar:"/images/user.png"};
+              
+              // 
+              document.getElementById("user-avatar").src = user.avatar;
+              document.getElementById("user-name").innerHTML = user.name;
+
+              // 
+              document.getElementById("user-info").style.display = "block";
+            }
+          </script>
+          <!-- end user dropdown -->
+          <!-- end -->
         </div>
       </div>
     </div>
-
-    <script language="javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script language="javascript" src="js/kiemtra.js"></script>
-    <script src="js/login.js"></script>
-  </body>
+  </div>
+  <!-- start login -->
+  <div id="login_box">
+    <div id="login_form">
+      <form action="#" id="form1" name="form1">
+        <fieldset class="form_group">
+          <legend>Sign into your account</legend>
+          <p>Please enter your name and password to log in.</p>
+          <div class="input_box">
+            <i class="fa fa-user"></i>
+            <input type="text" id="user" class="input_item" placeholder="Username">
+          </div>
+          <div id="loiUser"></div>
+          <div class="input_box">
+            <i class="fa fa-lock"></i>
+            <input type="text" id="password" class="input_item" placeholder="Password">
+          </div>
+          <div id="loiPass"></div>
+          <div class="check_box">
+            <input type="checkbox" id="remember" value="1">
+            <label for="remember">Keep me signed in</label>
+          </div>
+          <div class="button_item">
+            <button id="b1" type="submit">
+              Login
+              <i class="fa fa-arrow-circle-right"></i>
+            </button>
+          </div>
+          <p>Don't have an account yet?<a href="register.html">Create an a account</a></p>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!-- end login -->
+</body>
 </html>

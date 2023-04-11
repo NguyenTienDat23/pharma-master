@@ -444,9 +444,25 @@
                 </ul>
               </td>
               <!-- Kết thúc -->
-            </div>
-            <!-- Kết thúc Thông tin sản phẩm -->
-          </div> 
+            </tbody>
+          </table>
+          <script>
+function toggleTable() {
+  var table = document.getElementById("myTable");
+  var moreText = document.getElementsByClassName("show-more")[0];
+  if (table.classList.contains("show")) {
+    table.classList.remove("show");
+    moreText.classList.remove("hidden");
+    moreText.innerHTML = "Xem thêm thông tin";
+  } else {
+    table.classList.add("show");
+    moreText.classList.add("hidden");
+    moreText.innerHTML = "Thu gọn";
+  }
+}
+var moreText = document.getElementsByClassName("show-more")[0];
+moreText.addEventListener("click", toggleTable);
+</script>
         </div>
       </div>
       <!--Bắt đầu Nút button và CSS thẻ button ở đấy -->
