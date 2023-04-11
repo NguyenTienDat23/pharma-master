@@ -1,146 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Pharma &mdash; Colorlib Template</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <title>Pharma &mdash; Colorlib Template</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link
+      rel="stylesheet prefetch"
+      href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+    />
 
-  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/aos.css" />
 
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body>
-
-  <div class="row">
-    <div class="col">
-      <!-- Full-width images with number text -->
-      <div class="product-img">
-        <!-- Vừa thay đổi kích cỡ ảnh ở đây -->
-        <div class="mySlides">
-          <img src="images/product_01.png" style="border-style: ridge;width: 180%;">
+  <body>
+    <div class="site-wrap">
+      <div class="site-navbar py-2">
+        <div class="search-wrap">
+          <div class="container">
+            <a href="#" class="search-close js-search-close"
+              ><span class="icon-close2"></span
+            ></a>
+            <form action="#" method="post">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search keyword and hit enter..."
+              />
+            </form>
+          </div>
         </div>
 
-        <div class="mySlides">
-          <img src="images/product_02.png" style="border-style: ridge;width: 180%;">
-        </div>
-        <div class="mySlides">
-          <img src="images/product_01.png" style="border-style: ridge;width: 180%;">
-        </div>
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="logo">
+              <div class="site-logo">
+                <a href="index.html" class="js-logo-clone">Pharma</a>
+              </div>
+            </div>
+            <div class="main-nav d-none d-lg-block">
+              <nav
+                class="site-navigation text-right text-md-center"
+                role="navigation"
+              >
+                <ul class="site-menu js-clone-nav d-none d-lg-block">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="shop.html">Store</a></li>
+                  <li class="has-children">
+                    <a href="#">Dropdown</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Supplements</a></li>
+                      <li class="has-children">
+                        <a href="#">Vitamins</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Supplements</a></li>
+                          <li><a href="#">Vitamins</a></li>
+                          <li><a href="#">Diet &amp; Nutrition</a></li>
+                          <li><a href="#">Tea &amp; Coffee</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Diet &amp; Nutrition</a></li>
+                      <li><a href="#">Tea &amp; Coffee</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- sửa icon giỏ hàng rồi -->
+            <div class="icons">
+              <a href="#" class="icons-btn d-inline-block js-search-open"
+                ><span class="icon-search"></span
+              ></a>
+              <a href="#" class="icons-btn d-inline-block js-search-open"
+                ><span class="icon-envelope-o"></span
+              ></a>
+              <a href="login.html">Login/SignUp</a>
+              <a
+                href="#"
+                class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"
+                ><span class="icon-menu"></span
+              ></a>
+            </div>
 
-        <div class="mySlides">
-          <img src="images/product_01.png" style="border-style: ridge;width: 180%;">
-        </div>
+            <!-- user dropdown start-->
+            <div class="profile-dropdown" id="profile-dropdown">
+              <div class="profile-dropdown-btn">
+                <div class="profile-img">
+                  <img src="/images/user.png" alt="" />
+                  <i class="fa-solid fa-circle"></i>
+                </div>
+                <span>
+                  Victorria
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </div>
 
-        <div class="mySlides">
-          <img src="images/product_01.png" style="border-style: ridge;width: 180%;">
+              <ul class="profile-dropdown-list" id="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    Edit Profile
+                  </a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-regular fa-circle-question"></i>
+                    Help & Support
+                  </a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                  <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Log out
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <script>
+              var profile_dropdown =
+                document.getElementById("profile-dropdown");
+              var profile_dropdown_list = document.getElementById(
+                "profile-dropdown-list"
+              );
+              profile_dropdown.addEventListener("click", () => {
+                profile_dropdown_list.classList.toggle(
+                  "profile_dropdown_list_hien"
+                );
+              });
+            </script>
+            <!-- end user dropdown -->
+            <!-- end -->
+          </div>
         </div>
-
-        <div class="mySlides">
-          <img src="images/product_01.png" style="border-style: ridge;width: 180%;">
-        </div>
-        <!-- Kêt thúc thay đổi kích cỡ ảnh -->
       </div>
 
-      <!-- Thumbnail images -->
-      <div class="img-container">
-        <img class="demo cursor" src="images/product_01.png" style="border-style: ridge;" onclick="currentSlide(1)">
-        <img class="demo cursor" src="images/product_02.png" style="border-style: ridge;" onclick="currentSlide(2)">
-        <img class="demo cursor" src="images/product_03.png" style="border-style: ridge;" onclick="currentSlide(3)">
-        <img class="demo cursor" src="images/product_04.png" style="border-style: ridge;" onclick="currentSlide(4)">
-        <!-- <img class="demo cursor" src="images/product_05.png"  style="border-style: ridge;" onclick="currentSlide(5)" >
+      <div class="row">
+        <div class="col">
+          <!-- Full-width images with number text -->
+          <div class="product-img">
+            <!-- Vừa thay đổi kích cỡ ảnh ở đây -->
+            <div class="mySlides">
+              <!-- Thay đổi khung viền sản phẩm -->
+              <img
+                src="images/product_01.png"
+                style="
+                  border: 3px double black;
+                  width: 260px;
+                  background-color: #ccffff;
+                "
+              />
+            </div>
+            <div class="mySlides">
+              <img
+                src="images/product_01.png"
+                style="
+                  border: 3px double black;
+                  width: 260px;
+                  background-color: #ccffff;
+                "
+              />
+            </div>
+            <div class="mySlides">
+              <img
+                src="images/product_01.png"
+                style="
+                  border: 3px double black;
+                  width: 260px;
+                  background-color: #ccffff;
+                "
+              />
+            </div>
+            <div class="mySlides">
+              <img
+                src="images/product_01.png"
+                style="
+                  border: 3px double black;
+                  width: 260px;
+                  background-color: #ccffff;
+                "
+              />
+            </div>
+            <div class="mySlides">
+              <img
+                src="images/product_01.png"
+                style="
+                  border: 3px double black;
+                  width: 260px;
+                  background-color: #ccffff;
+                "
+              />
+            </div>
+            <div class="mySlides">
+              <img
+                src="images/product_01.png"
+                style="
+                  border: 3px double black;
+                  width: 260px;
+                  background-color: #ccffff;
+                "
+              />
+            </div>
+            <!-- Kêt thúc thay đổi kích cỡ ảnh -->
+          </div>
+
+          <!-- Thumbnail images -->
+          <div class="img-container">
+            <img
+              class="demo cursor"
+              src="images/product_03.png"
+              style="border: 3px double black; background-color: #ccffff"
+              onclick="currentSlide(1)"
+            />
+            <img
+              class="demo cursor"
+              src="images/product_03.png"
+              style="border: 3px double black; background-color: #ccffff"
+              onclick="currentSlide(2)"
+            />
+            <img
+              class="demo cursor"
+              src="images/product_03.png"
+              style="border: 3px double black; background-color: #ccffff"
+              onclick="currentSlide(3)"
+            />
+            <img
+              class="demo cursor"
+              src="images/product_04.png"
+              style="border: 3px double black; background-color: #ccffff"
+              onclick=" currentSlide(4)"
+            />
+            <!-- <img class="demo cursor" src="images/product_05.png"  style="border-style: ridge;" onclick="currentSlide(5)" >
     <img class="demo cursor" src="images/product_06.png"  style="border-style: ridge;" onclick="currentSlide(6)" > -->
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="product-content">
+            <b>Ten San Phammm</b>
+          </div>
+
+          <div class="content">
+            <!-- sửa style.css từ dòng 1316->1321-->
+            <p>Viet content o day</p>
+            <!--Mô tả sản phẩm ở đây-->
+          </div>
+        </div>
+        <div
+          class="col"
+          style="
+            border: 0px solid;
+            padding: 17px;
+            margin: 25px;
+            margin-top: 120px;
+          "
+        >
+          <div
+            class="sp-lienquan"
+            style="font-weight: bold; font-size: 20px; text-align: center"
+          >
+            <u>Các sản phẩm liên quan</u>
+          </div>
+          <div class="chitiet-sp">
+            <img
+              class="anh-chitietsp"
+              src="images/product_03.png"
+            />
+            <a href="Detailspr.html"style="margin-top: 10px;">Ten san pham</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="col" style="margin-left: 200px;">
-       <div class="product-content" >
-      <b>Ten San Pham</b>
-       </div>
-      <div class="content">
-         <!-- sửa style.css từ dòng 1316->1321-->
-        <p>Viet content  o day </p>
-      </div>
-    </div>
-    </div>
+      <style>
+        .img-container {
+          margin-left: 45px;
+          float: left;
+          display: flex;
+          /* Sử dụng flexbox để hiển thị các hình ảnh trên cùng một hàng */
+          justify-content: left;
+          /* Canh giữa các hình ảnh */
+          align-items: left;
+          /* Canh trung tâm theo chiều dọc*/
+        }
 
+        .img-container img {
+          width: 100%;
+          /* Chiều rộng của mỗi hình ảnh */
+          height: 90px;
+          /* Chiều cao của mỗi hình ảnh */
+          margin: 10px;
+          /* Khoảng cách giữa các hình ảnh */
+          object-fit: cover;
+          /* Đảm bảo hình ảnh không bị méo khi thay đổi kích thước */
+        }
+      </style>
 
+      <!-- Bắt đầu CSS ẩn hiện thông tin sản phẩm ở đây -->
+      <style>
+        .thongtin-sp {
+          background-color: #ccffff;
+          height: 100px; /* Chiều cao tối đa của phần tử */
+          overflow: hidden; /* Ẩn đi nội dung dài */
+        }
+        .thongtin-sp.open {
+          height: auto; /* Mở rộng chiều cao để hiển thị toàn bộ nội dung */
+        }
+      </style>
+      <!-- Kết thúc CSS ẩn hiện thông tin sản phẩm ở đây -->
 
+      <div class="col" style="max-width: 65%">
+        <div class="mt-5">
+          <div class="tab-content" id="pills-tabContent">
+            <div>
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+              >
+                <!-- thay table bằng div -->
+                <thead>
+                  <th>Mô tả</th>
+                </thead>
+                <div class="custom-tablesp">
+                  <!-- Sửa thông tin ở đây và CSS dòng 1362->1369 -->
 
-
-
-  <style>
-    .img-container {
-      margin-left: 65%;
-      float: left;
-      display: flex;
-      /* Sử dụng flexbox để hiển thị các hình ảnh trên cùng một hàng */
-      justify-content: left;
-      /* Canh giữa các hình ảnh */
-      align-items: left;
-      /* Canh trung tâm theo chiều dọc*/
-    }
-
-    .img-container img {
-      width: 100%;
-      /* Chiều rộng của mỗi hình ảnh */
-      height: 90px;
-      /* Chiều cao của mỗi hình ảnh */
-      margin: 10px;
-      /* Khoảng cách giữa các hình ảnh */
-      object-fit: cover;
-      /* Đảm bảo hình ảnh không bị méo khi thay đổi kích thước */
-    }
-  </style>
-
-<!-- Bắt đầu CSS ẩn hiện thông tin sản phẩm ở đây -->
-<style>
- .thongtin-sp{
-    height: 100px; /* Chiều cao tối đa của phần tử */
-    overflow: hidden; /* Ẩn đi nội dung dài */
-  }
-  .thongtin-sp.open {
-    height: auto; /* Mở rộng chiều cao để hiển thị toàn bộ nội dung */
-  }
-</style>
-<!-- Kết thúc CSS ẩn hiện thông tin sản phẩm ở đây -->
-
-
-
-
-  <div class="col ">
-    <!-- <h2 class="text-black">Ibuprofen Tablets, 200mg</h2> -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vitae, explicabo? Incidunt facere, natus
-      soluta dolores iusto! Molestiae expedita veritatis nesciunt doloremque sint asperiores fuga voluptas,
-      distinctio, aperiam, ratione dolore.</p>
-    <div class="mt-5">
-
-      <div class="tab-content" id="pills-tabContent">
-        <div>
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-          <!-- thay table bằng div -->
-            <thead>
-              <th>Mô tả</th>
-            </thead>
-          <div class="custom-tablesp">
-           <!-- Sửa thông tin ở đây và CSS dòng 1362->1369 -->
-            
-            <!--Bắt đầu Thông tin sản phẩm ở đây -->
-            <div class="thongtin-sp">
-              <td class="ten-mota">
-                <!-- Thêm một số thông tin sản phẩm ở đây -->
+                  <!--Bắt đầu Thông tin sản phẩm ở đây -->
+                  <div class="thongtin-sp">
+                    <td class="ten-mota">
+                      <!-- Thêm một số thông tin sản phẩm ở đây -->
                 <p><strong>Loại Thuốc</strong></p>
                 <ul>
                   <li>Vitamin C (Dưới dạng Acid L-ascorbic): 500 mg</li>

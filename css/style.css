@@ -3,7 +3,7 @@
 body {
  
   line-height: 1.7;
-  color: #8c92a0;
+  /* color: #8c92a0; */
   font-weight: 300;
   font-size: 16px; }
 
@@ -1238,9 +1238,7 @@ word-wrap:break-word;
   border-color: #000;
 }
 
-/* .mySlides {
-  display: none;
-} */
+
 
 .cursor {
   cursor: pointer;
@@ -1281,16 +1279,18 @@ word-wrap:break-word;
 }
 .product-img{
   
-  margin-left: 75%;
-  margin-top: 110px;
+  margin-left: 80px;
+  margin-top: 120px;
 }
 
 /* Thay đổi cơ chữ màu chữ tiêu đề ở đây */
 .product-content{
   /* word-wrap: break-word; */
-  float:top;
   /* margin-right: 250px; */
-  font-size: 50px;
+  /* margin-top: 100px; */
+  padding-top: 100px;
+  float:top;
+  font-size: 40px;
 }
 
 
@@ -1367,7 +1367,6 @@ word-wrap:break-word;
   cursor: pointer;
 }
 .ten-mota{
-
   flex:1;
   display: block;
 }
@@ -1496,4 +1495,18 @@ word-wrap:break-word;
 }
 .custom-tablesp{
   border:  2px outset #351d8b;
+}
+
+.chitiet-sp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anh-chitietsp{
+  width:100px;
+  border: 1px solid black;
+}
+.anh-chitietsp:hover{
+  border-style: double;
 }
